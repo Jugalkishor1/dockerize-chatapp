@@ -11,6 +11,7 @@ services:
     mem_reservation: "1024m"
     depends_on:
       - db
+      - redis
     ports:
       - '3000:3000'     
   db:
@@ -21,5 +22,12 @@ services:
       - "5432"
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
+  redis:
+    image: "redis:7-alpine"
+    command: redis-server
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./tmp/redis_data:/data
 volumes:
   postgres:
