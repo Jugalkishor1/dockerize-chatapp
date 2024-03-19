@@ -2,9 +2,14 @@
 
 ## Description
 
-This rails application is made by me in my training period. This is a simple Chat application. In this we can make friends and can communicate with them like facebook. For realtime chatting I have use Redis and action cable to show message without refreshing the page.
-Also we can your Post and get likes and comments as well.
+Chatting app is a simple chat application built during the training period. It allows users to make friends, communicate with them in real-time using WebSocket technology via Action Cable, and share posts with likes and comments functionality.
 
+## Features
+
+    Real-time chat functionality powered by Action Cable and Redis
+    User authentication and friend management
+    Post creation, liking, and commenting
+    Simple and intuitive user interface
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps
@@ -20,29 +25,3 @@ To get this project up and running locally, you must already have ruby and neces
 - imagemagick
 
 ### 1. Installation
-
-Clone the project using the following bash command in an appropriate location:
-
-```
-git clone https://github.com/Jugalkishor1/Chatting-app.git 
-```
-
-### 2. Go to the project directory.
-	cd Chatting-app
-
-### 3. Run this command get the necesary gems.
-	bundle install
-
-### 4. Database setup
-	rails db:drop
-	rails db:create
-	rails db:migrate
-
-### 5. Run the server
-In the project directory, you can run the project by using following bash command:
-```	
-rails server
-```
-
-And now you can visit the site with the URL http://localhost:3000
- 
