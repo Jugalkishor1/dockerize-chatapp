@@ -12,8 +12,10 @@ services:
     depends_on:
       - db
       - redis
+      - webpack
     ports:
       - '3000:3000'     
+
   db:
     image: postgres:13
     volumes:
@@ -22,6 +24,19 @@ services:
       - "5432"
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
+
+  webpack:
+    tty: true
+    stdin_open: true
+    image: my_app
+    command: ["bundle", "exec", "bin/webpack-dev-server"]
+    ports:
+      - '3035:3035'
+    volumes:
+      - ".:/app"
+    environment:
+      RAILS_ENV: development
+
   redis:
     image: "redis:7-alpine"
     command: redis-server
