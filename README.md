@@ -31,7 +31,7 @@ To set up and run the application locally using Docker, follow these steps:
 Clone the project using the following bash command in an appropriate location:
 
 ```
-https://github.com/Jugalkishor1/dockerize-chatapp.git
+git clone https://github.com/Jugalkishor1/dockerize-chatapp.git
 ```
 
 ### 2. Go to the project directory.
