@@ -282,7 +282,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   devise
   figaro
-  image_processing (~> 1.0)
+  image_processing (~> 1.12, >= 1.12.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
   omniauth (~> 2.0.2)
