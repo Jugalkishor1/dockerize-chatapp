@@ -43,22 +43,17 @@ git clone https://github.com/Jugalkishor1/dockerize-chatapp.git
 ### 4. Database setup
 	docker-compose run --rm app bundle exec rake db:create db:migrate db:seed
 
-### 5. Start the Docker containers/application:
+### 5. Install dependencies with yarn.
+	docker-compose run app yarn install
+
+### 6. Start the Docker containers/application:
 	docker-compose up
 
 Access the application in your web browser at http://localhost:3000.
 
-### 6. When you're finished, stop the Docker containers:
+### 7. When you're finished, stop the Docker containers:
     docker-compose down
-
-
-## Additional commands:
-### Install dependecies with yarn.
-	docker-compose run app yarn install
 
 Contributing
 
 Contributions are welcome! If you'd like to contribute to MyChatApp, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
-License
-
-This project is licensed under the MIT License.
