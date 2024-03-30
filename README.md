@@ -52,6 +52,10 @@ Access the application in your web browser at http://localhost:3000.
     docker-compose down
 
 
+## Additional commands:
+### Install dependecies with yarn.
+	docker-compose run app yarn install
+
 Contributing
 
 Contributions are welcome! If you'd like to contribute to MyChatApp, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
