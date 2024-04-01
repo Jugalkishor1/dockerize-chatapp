@@ -4,16 +4,13 @@ FROM ruby:3.0.4
 RUN apt-get update -qq && \
     apt-get install -y nodejs yarn && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
+    apt-get update -y
 
 # Update
-RUN apt-get update -y
 
-# Install Yarn
-RUN apt-get install yarn -y
-
-# Install bundler
-RUN gem install bundler:2.2.22
+# Install Yarn and bundler
+RUN apt-get install yarn -y && gem install bundler:2.5.5
 
 # create directory where we will keep our code.
 RUN mkdir /app
@@ -21,17 +18,11 @@ RUN mkdir /app
 #Change directory
 WORKDIR /app
 
-# Copy Gemfile and Gemfile.lock
-COPY Gemfile* ./
+# Copy Gemfile, package.json and yarn.lock files
+COPY Gemfile* package.json yarn.lock ./
 
-# Run bundle install only after copying gemfile
-RUN ["bundle", "install"]
-
-# Copy package.json and yarn.lock files
-COPY package.json yarn.lock ./
-
-# Install Yarn dependencies
-RUN yarn install
+# Install necessary gems and dependencies
+RUN bundle install && yarn install
 
 # Copy whole code
 COPY . .
