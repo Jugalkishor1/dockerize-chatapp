@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 
-//= require jquery
+//= require jquery3
 //= require popper
 //= require turbolinks
 //= require bootstrap
