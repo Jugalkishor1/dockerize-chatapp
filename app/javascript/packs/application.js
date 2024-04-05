@@ -20,6 +20,9 @@ import 'bootstrap';
 // import '@popperjs/core';
 import "bootstrap/scss/bootstrap";
 import 'bootstrap/js/dist/modal';
+import 'bootstrap-icons/font/bootstrap-icons.css'
+
+import "./login_sign_page"
 
 require("trix")
 require("@rails/actiontext")
