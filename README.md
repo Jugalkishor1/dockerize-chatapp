@@ -2,7 +2,7 @@
 
 ## Description
 
-Chatting app is a simple chat application built during the training period. It allows users to make friends, communicate with them in real-time using WebSocket technology via Action Cable, and share posts with likes and comments functionality.
+Chatting app is a simple chat application built in first 2 months of my training period in ruby on rails as a fresher. It allows users to make friends, communicate with them in real-time using WebSocket technology via Action Cable, and share posts with likes and comments functionality.
 
 ## Features
 
@@ -43,17 +43,29 @@ git clone https://github.com/Jugalkishor1/dockerize-chatapp.git
 ### 4. Database setup
 	docker-compose run --rm app bundle exec rake db:create db:migrate db:seed
 
-### 5. Install dependencies with yarn.
-	docker-compose run app yarn install
-
-### 6. Start the Docker containers/application:
+### 5. Start the Docker containers/application:
 	docker-compose up
 
 Access the application in your web browser at http://localhost:3000.
 
-### 7. When you're finished, stop the Docker containers:
+### 6. When you're finished, stop the Docker containers:
     docker-compose down
 
+Additionally, run below command if you encounter this mentioned error or if 'node_modules' are missing.\
+### 7. Install dependencies with yarn.
+	docker-compose run app yarn install
+
+```
+	Webpacker can't find application in C:/Users/[...]/site_test/public/packs/manifest.json. Possible causes:
+	1. You want to set webpacker.yml value of compile to true for your environment
+	   unless you are using the `webpack -w` or the webpack-dev-server.
+	2. webpack has not yet re-run to reflect updates.
+	3. You have misconfigured Webpacker's config/webpacker.yml file.
+	4. Your webpack configuration is not creating a manifest.
+	Your manifest contains:
+	{
+	}
+```
 Contributing
 
-Contributions are welcome! If you'd like to contribute to MyChatApp, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are welcome! If you'd like to contribute to Chatting app, please fork the repository, make your changes, and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
