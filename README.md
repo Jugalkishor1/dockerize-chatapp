@@ -4,6 +4,11 @@
 
 Chatting app is a simple chat application built in first 2 months of my training period in ruby on rails as a fresher. It allows users to make friends, communicate with them in real-time using WebSocket technology via Action Cable, and share posts with likes and comments functionality.
 
+Note: I recently had the opportunity to work on a Dockerized live project, which trigger my interest in learning Docker. This led me to experiment with Dockerizing my first demo project that is 'Chatapp'. Currently, I am focusing on refining the Docker setup to enhance its efficiency and scalability with docker best pratices and make it production ready.
+Additionally, my next steps involve familiarizing myself with CI/CD pipelines and integrating them into this project."
+
+Also, this is my career's first project, so please don't focus too much on the front-end part.
+
 ## Features
 
 - Real-time chat functionality powered by Action Cable and Redis
