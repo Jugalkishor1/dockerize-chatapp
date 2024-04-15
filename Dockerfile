@@ -7,8 +7,6 @@ RUN apt-get update -qq && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update -y
 
-# Update
-
 # Install Yarn and bundler
 RUN apt-get install yarn -y && gem install bundler:2.5.5
 
